@@ -9,15 +9,14 @@
   - `rating` *(Int)* – user’s rating at the time of submission  
   - `date` *(Datetime)* – date of the task submission  
   - `code` *(String)* – submitted code
+- **tasks_information.csv:**
+  - `id` *(Int)* – unique problem ID on Codeforces  
+  - <code>topic<sub>i</sub></code> *(Boolean)* – one-hot encoded columns representing the presence of each topic in the problem (e.g., `{graphs}`, `{dp}`, etc)
 
 **preparing**
 - **data_collecting.ipynb**
 
   This file uses the public Codeforces API to fully extract submissions and code of all active users (those who have participated in at least one round in the last 6 months)
-
-- **tasks_information.csv:**
-  - `id` *(Int)* – unique problem ID on Codeforces  
-  - <code>topic<sub>i</sub></code> *(Boolean)* – one-hot encoded columns representing the presence of each topic in the problem (e.g., `{graphs}`, `{dp}`, etc)
 
 **models**
   - **codes_clusteting.pkl**
